@@ -22,6 +22,17 @@ export interface OperationRecord {
   priority: string;
 }
 
+export interface BlacklistUser {
+  id: string;
+  userName: string;
+  userId: string;
+  violationCount: number;
+  banTime: string;
+  unbanTime: string;
+  status: "banned" | "permanent";
+  reason: string;
+}
+
 export interface OverviewResponse {
   appName: string;
   appCode: string;
@@ -29,4 +40,5 @@ export interface OverviewResponse {
   features: FeatureItem[];
   kpis: KpiItem[];
   records: OperationRecord[];
+  blacklist: BlacklistUser[];
 }

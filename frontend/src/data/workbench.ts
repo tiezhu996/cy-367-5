@@ -1,4 +1,47 @@
-import type { FeatureItem, KpiItem, OperationRecord } from "../types";
+import type { FeatureItem, KpiItem, OperationRecord, BlacklistUser } from "../types";
+
+export const localBlacklist: BlacklistUser[] = [
+  {
+    "id": "blacklist-1",
+    "userName": "张伟",
+    "userId": "U10001",
+    "violationCount": 3,
+    "banTime": "2026-06-01 14:30",
+    "unbanTime": "2026-06-15 14:30",
+    "status": "banned",
+    "reason": "预约后未签到"
+  },
+  {
+    "id": "blacklist-2",
+    "userName": "李娜",
+    "userId": "U10023",
+    "violationCount": 5,
+    "banTime": "2026-05-20 09:15",
+    "unbanTime": "2026-07-20 09:15",
+    "status": "banned",
+    "reason": "多次提前离场"
+  },
+  {
+    "id": "blacklist-3",
+    "userName": "王芳",
+    "userId": "U10045",
+    "violationCount": 2,
+    "banTime": "2026-06-05 16:45",
+    "unbanTime": "2026-06-12 16:45",
+    "status": "banned",
+    "reason": "损坏设施"
+  },
+  {
+    "id": "blacklist-4",
+    "userName": "刘强",
+    "userId": "U10067",
+    "violationCount": 8,
+    "banTime": "2026-04-10 11:00",
+    "unbanTime": "永久",
+    "status": "permanent",
+    "reason": "严重违规屡教不改"
+  }
+];
 
 export const localFeatures: FeatureItem[] = [
   {

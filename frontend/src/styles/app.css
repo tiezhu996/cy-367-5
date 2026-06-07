@@ -152,6 +152,13 @@ body {
   font-weight: 700;
 }
 
+.work-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(18px, 3vw, 32px);
+  margin-top: 26px;
+}
+
 @media (max-width: 860px) {
   .topbar {
     align-items: flex-start;
@@ -163,6 +170,10 @@ body {
   }
 
   .metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-grid {
     grid-template-columns: 1fr;
   }
 }
